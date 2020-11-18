@@ -1,89 +1,70 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <div class="text-center">
-        <logo />
-        <vuetify-logo />
+  <div>
+    <div class="page-header clear-filter" filter-color="orange">
+      <parallax
+        class="page-header-image"
+        style="background-image:url('img/header.jpg')"
+      >
+      </parallax>
+      <div class="container">
+        <div class="content-center brand">
+          <img class="n-logo" src="img/now-logo.png" alt="" />
+          <h1 class="h1-seo">CodeWithKyrian</h1>
+          <h3>Learn and understand programming to the core</h3>
+        </div>
+        <h6 class="category category-absolute">
+            <n-button type="primary" round>Contact me</n-button>
+        </h6>
       </div>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
-          </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
+    </div>
+    <div class="main">
+      <div class="section section-images">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="hero-images-container-1">
+                <img src="img/hero-image-2.png" alt="" />
+              </div>
+              <div class="hero-images-container-2">
+                <img src="img/hero-image-3.png" alt="" />
+              </div>
+            </div>
           </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
-          >
-            Continue
-          </v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-col>
-  </v-row>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container text-center">
+        <div class="row justify-content-md-center">
+          <div class="col-md-12 col-lg-8">
+            <h2 class="title">Completed with examples</h2>
+            <h5 class="description">
+              The kit comes with three pre-built pages to help you get started
+              faster. You can change the text and images and you're good to go.
+              More importantly, looking at them will give you a picture of what
+              you can built with this powerful Bootstrap 4 ui kit.
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
-
 <script>
-import Logo from '~/components/Logo.vue'
-import VuetifyLogo from '~/components/VuetifyLogo.vue'
+import { Parallax } from '@/components';
+import {Button} from '@/components';
 
 export default {
+  name: 'index',
+  head: {
+    bodyAttrs: {
+      class: "sidebar-collapse index-page",
+    }
+  },
   components: {
-    Logo,
-    VuetifyLogo
+    Parallax,
+    [Button.name]: Button
   }
-}
+};
 </script>
+<style></style>
