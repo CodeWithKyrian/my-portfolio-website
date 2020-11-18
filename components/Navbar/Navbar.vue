@@ -5,7 +5,7 @@
         <slot v-bind="slotData"></slot>
         <navbar-toggle-button
           :toggled="showMenu"
-          @click="toggle"
+          @click.native.prevent="toggle"
         ></navbar-toggle-button>
       </div>
       <div
