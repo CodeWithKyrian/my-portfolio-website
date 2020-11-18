@@ -1,24 +1,18 @@
 /**
  * You can register global mixins here
  */
-
-const GlobalMixins = {
-  install(Vue) {
-    Vue.mixin({
-      mounted() {
+import Vue from 'vue';
+Vue.mixin({
+    mounted() {
         let { bodyClass } = this.$options;
         if (bodyClass) {
-          document.body.classList.add(bodyClass);
+            document.body.classList.add(bodyClass);
         }
-      },
-      beforeDestroy() {
+    },
+    beforeDestroy() {
         let { bodyClass } = this.$options;
         if (bodyClass) {
-          document.body.classList.remove(bodyClass);
+            document.body.classList.remove(bodyClass);
         }
-      }
-    });
-  }
-};
-
-export default GlobalMixins;
+    }
+});

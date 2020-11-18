@@ -25,6 +25,8 @@ export default {
         { src: '~/plugins/bootstrap-vue', ssr: true },
         { src: '~/plugins/now-ui-kit', ssr: true },
         { src: '~/plugins/vue-lazyload.js', ssr: true },
+        { src: '~/plugins/globalMixins.js' },
+        { src: '~/plugins/globalDirectives.js' },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
