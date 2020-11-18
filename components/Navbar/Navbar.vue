@@ -5,7 +5,7 @@
         <slot v-bind="slotData"></slot>
         <navbar-toggle-button
           :toggled="showMenu"
-          @click.native.prevent="toggle"
+          @click.native.stop="toggle"
         ></navbar-toggle-button>
       </div>
       <div
@@ -144,7 +144,7 @@ export default {
       let isOpen = htmlClasses.contains('nav-open');
       let eventToTrigger = isOpen ? 'open' : 'close';
       this.showMenu = isOpen;
-      this.$emit(eventToTrigger);
+      //this.$emit(eventToTrigger);
     },
     toggle() {
       this.setNav(!this.showMenu);
