@@ -135,7 +135,7 @@ export default {
   },
   methods: {
     setNav(value) {
-      let htmlClasses = document.querySelector('html').classList;
+      let htmlClasses = document.documentElement.classList;
       if (value) {
         htmlClasses.add('nav-open');
       } else {

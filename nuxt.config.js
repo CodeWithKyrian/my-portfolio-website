@@ -18,15 +18,19 @@ export default {
     },
 
     // Global CSS (https://go.nuxtjs.dev/config-css)
-    css: [],
+    css: [
+        "bootstrap/dist/css/bootstrap.css",
+        '@/assets/scss/now-ui-kit.scss',
+        '@/assets/demo/demo.css'
+    ],
 
     // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
     plugins: [
         { src: '~/plugins/bootstrap-vue', ssr: true },
         { src: '~/plugins/now-ui-kit', ssr: true },
         { src: '~/plugins/vue-lazyload.js', ssr: true },
-        { src: '~/plugins/globalMixins.js' },
-        { src: '~/plugins/globalDirectives.js' },
+        { src: '~/plugins/globalMixins.js', ssr: true },
+        { src: '~/plugins/globalDirectives.js', ssr: true },
     ],
 
     // Auto import components (https://go.nuxtjs.dev/config-components)
