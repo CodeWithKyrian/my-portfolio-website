@@ -11,9 +11,11 @@
           <img class="n-logo" src="img/now-logo.png" alt="" />
           <h1 class="h1-seo">CodeWithKyrian</h1>
           <h3>Learn and understand programming to the core</h3>
+          <n-button type="primary" round>Contact me</n-button>
+          <n-button type="primary" simple round>Recent Tutorials</n-button>
         </div>
         <h6 class="category category-absolute">
-            <n-button type="primary" round>Contact me</n-button>
+            
         </h6>
       </div>
     </div>

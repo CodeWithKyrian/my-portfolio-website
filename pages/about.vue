@@ -8,18 +8,18 @@
       </parallax>
       <div class="container">
         <div class="photo-container">
-          <img src="img/ryan.jpg" alt="" />
+          <img src="img/kyrian.png" alt="" />
         </div>
         <h3 class="title">Obikwelu Kyrian</h3>
-        <p class="category">Programmer</p>
+        <p class="category">Developer</p>
         <div class="content">
           <div class="social-description">
-            <h2>26</h2>
+            <h2>6</h2>
             <p>Projects</p>
           </div>
           <div class="social-description">
             <h2>26</h2>
-            <p>Comments</p>
+            <p>Contributions</p>
           </div>
           <div class="social-description">
             <h2>48</h2>
@@ -49,12 +49,14 @@
             <i class="fab fa-instagram"></i>
           </a>
         </div>
-        <h3 class="title">About me</h3>
+        <h3 class="title">Greetings!</h3>
         <h5 class="description">
-          An artist of considerable range, Ryan — the name taken by
-          Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and
-          records all of his own music, giving it a warm, intimate feel with a
-          solid groove structure. An artist of considerable range.
+I’m Kyrian, a Nigerian-based web designer, web developer, graphics designer and founder of CodeWithKyrian — an educational media platform for learning about programming.
+
+I started out as a freelance programmer in 2018, working primarily through crowdsourcing sites like Upwork. Web develpment is my best-selling service, and it was the type of programming I enjoyed most, so I branded myself as a web developer. I have served up to 10 Clients and counting.
+
+In 2020 I launched CodeWithKyrian.com as an independent platform where I could offer my services , help others around me with what I'd learnt and build a business infrastructure of my own. I promoted the site by creating content that brings in search traffic — primarily YouTube videos and written articles for programmers in PHP, JavaScript ,C# etc using technologies like Laravel, VueJs, Unity3d, etc.
+
         </h5>
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
@@ -127,8 +129,13 @@
 import { Tabs, TabPane } from '@/components';
 
 export default {
-  name: 'profile',
-  bodyClass: 'profile-page',
+  name: 'about',
+   head: {
+    title: 'About Kyrian Obikwelu',
+    bodyAttrs: {
+      class: "sidebar-collapse profile-page",
+    }
+  },
   components: {
     Tabs,
     TabPane

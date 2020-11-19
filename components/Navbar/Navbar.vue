@@ -179,8 +179,14 @@ export default {
   },
   beforeDestroy() {
     document.removeEventListener('scroll', this.scrollListener);
-  },directives: {
+  },
+  directives: {
     ClickOutside
+  },
+  watch: {
+    '$route' () {
+      this.close()
+    }
   }
 };
 </script>

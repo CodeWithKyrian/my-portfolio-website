@@ -12,7 +12,7 @@ export default {
         ],
         link: [
             { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-            { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200" },
+            { rel: 'stylesheet', href: "https://fonts.googleapis.com/css?family=Montserrat:400,700,200,300" },
             { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.0.6/css/all.css" }
         ]
     },
