@@ -39,7 +39,7 @@
 export default {
     head: {
         bodyAttrs: {
-            class: "sidebar-collapse articles-page",
+            class: "sidebar-collapse slug-page",
         }
     },
     data(){

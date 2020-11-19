@@ -3,7 +3,7 @@
     <div class="page-header clear-filter" filter-color="orange">
       <parallax
         class="page-header-image"
-        style="background-image:url('img/bg5.jpg')"
+        style="background-image:url('img/bg8.jpg')"
       >
       </parallax>
       <div class="container">
@@ -50,14 +50,14 @@
           </a>
         </div>
         <h3 class="title">Greetings!</h3>
-        <h5 class="description">
+        <p class="description">
 I’m Kyrian, a Nigerian-based web designer, web developer, graphics designer and founder of CodeWithKyrian — an educational media platform for learning about programming.
 
 I started out as a freelance programmer in 2018, working primarily through crowdsourcing sites like Upwork. Web develpment is my best-selling service, and it was the type of programming I enjoyed most, so I branded myself as a web developer. I have served up to 10 Clients and counting.
 
-In 2020 I launched CodeWithKyrian.com as an independent platform where I could offer my services , help others around me with what I'd learnt and build a business infrastructure of my own. I promoted the site by creating content that brings in search traffic — primarily YouTube videos and written articles for programmers in PHP, JavaScript ,C# etc using technologies like Laravel, VueJs, Unity3d, etc.
+In 2020 I launched CodeWithKyrian.com as an independent platform where I could offer my services , help others around me with what I'd learnt and build a business infrastructure of my own. I am promoting the site by creating content that brings in search traffic — primarily YouTube videos and written articles for programmers in PHP, JavaScript ,C# etc using technologies like Laravel, VueJs, Unity3d, etc.
 
-        </h5>
+        </p>
         <div class="row">
           <div class="col-md-6 ml-auto mr-auto">
             <h4 class="title text-center">My Portfolio</h4>

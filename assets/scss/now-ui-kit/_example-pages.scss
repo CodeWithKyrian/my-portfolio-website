@@ -70,7 +70,7 @@
 // style for the profile page
 .profile-page {
     .page-header {
-        min-height: 550px;
+        min-height: 80vh;
     }
     .profile-container {
         color: #FFFFFF;
@@ -88,12 +88,12 @@
         margin-top: 5px;
         padding-top: 10px;
     }
-    .description,
+    .about-content,
     .category {
         text-align: center;
     }
-    h5.description {
-        max-width: 800px;
+    .about-content {
+        max-width: 900px;
         margin: 20px auto;
     }
     .nav-align-center {
@@ -126,9 +126,76 @@
         margin-top: 45px;
         padding-bottom: 50px;
     }
+    .skills__subtitle {
+        margin-bottom: 1rem;
+    }
+    .skills__data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        font-weight: 400;
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 25px rgba(14, 36, 49, 0.15);
+    }
+    .skills__icon {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color: $primary-color
+    }
+    .skills__names {
+        display: flex;
+        align-items: center;
+    }
+    .skills__bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $primary-color;
+        height: 0.25rem;
+        border-radius: 0.5rem;
+        z-index: 0;
+    }
+    .skills__html {
+        width: 95%;
+    }
+    .skills__css {
+        width: 85%;
+    }
+    .skills__js {
+        width: 65%;
+    }
+    .skills__ux {
+        width: 80%;
+    }
+    .skills__img {
+        padding: 3rem;
+    }
 }
 
 .articles-page {
+    .card-blog {
+        .card-title {
+            color: #000;
+            line-height: 1.5rem;
+            font-weight: 500;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+        .card-text {
+            font-size: 1rem;
+            line-height: 1.3rem;
+        }
+    }
+    .card-header {
+        img:hover {
+            transform: scale(1.02);
+            transition: .6s;
+        }
+    }
     .page-header {
         min-height: 75vh;
         .title {
@@ -157,14 +224,68 @@
         text-align: center;
     }
     .content {
-        max-width: 800px;
+        max-width: 900px;
         margin: 20px auto;
     }
     .nav-align-center {
         margin-top: 30px;
     }
     .date {
-        max-width: 500px;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+    .button-container {
+        text-align: center;
+        margin-top: -106px;
+    }
+    .collections {
+        img {
+            margin-bottom: 30px;
+        }
+    }
+    .gallery {
+        margin-top: 45px;
+        padding-bottom: 50px;
+    }
+}
+
+.slug-page {
+    .page-header {
+        min-height: 75vh;
+        .title {
+            font-size: 2.5rem;
+            margin-top: 50px;
+        }
+    }
+    .profile-container {
+        color: #FFFFFF;
+    }
+    .photo-container {
+        width: 123px;
+        height: 123px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto;
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.3);
+    }
+    .title {
+        text-align: center;
+        margin-top: 5px;
+        padding-top: 10px;
+    }
+    .content,
+    .category {
+        text-align: center;
+    }
+    .content {
+        max-width: 900px;
+        margin: 20px auto;
+    }
+    .nav-align-center {
+        margin-top: 30px;
+    }
+    .date {
+        max-width: 700px;
         margin: 0 auto;
     }
     .button-container {
