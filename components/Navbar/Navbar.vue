@@ -10,7 +10,7 @@
       </div>
       <div
         class="navbar-collapse collapse"
-        
+        v-click-outside="close"
         :style="menuImage ? `background: url(${menuImage}) 0% 0% / cover;` : ''"
         :class="[
           { show: showMenu },
@@ -32,6 +32,7 @@
 </template>
 <script>
 import NavbarToggleButton from './NavbarToggleButton';
+import ClickOutside from 'vue-click-outside'
 let resizeTimeout;
 function resizeThrottler(actualResizeHandler) {
   // ignore resize events as long as an actualResizeHandler execution is in the queue
@@ -178,6 +179,8 @@ export default {
   },
   beforeDestroy() {
     document.removeEventListener('scroll', this.scrollListener);
+  },directives: {
+    ClickOutside
   }
 };
 </script>
