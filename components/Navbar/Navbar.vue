@@ -10,7 +10,7 @@
       </div>
       <div
         class="navbar-collapse collapse"
-        v-click-outside="close"
+        
         :style="menuImage ? `background: url(${menuImage}) 0% 0% / cover;` : ''"
         :class="[
           { show: showMenu },
