@@ -136,15 +136,16 @@ export default {
   methods: {
     setNav(value) {
       let htmlClasses = document.documentElement.classList;
-      if (value) {
-        htmlClasses.add('nav-open');
-      } else {
-        htmlClasses.remove('nav-open');
-      }
-      let isOpen = htmlClasses.contains('nav-open');
+      // if (value) {
+      //   htmlClasses.add('nav-open');
+      // } else {
+      //   htmlClasses.remove('nav-open');
+      // }
+      let isOpen = value;
+      // let isOpen = htmlClasses.contains('nav-open');
       let eventToTrigger = isOpen ? 'open' : 'close';
       this.showMenu = isOpen;
-      //this.$emit(eventToTrigger);
+      this.$emit(eventToTrigger);
     },
     toggle() {
       this.setNav(!this.showMenu);
