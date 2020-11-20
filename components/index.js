@@ -12,6 +12,7 @@ import DropDown from './Dropdown.vue';
 import Card from './Cards/Card.vue';
 import Collapse from './Collapse/Collapse.vue';
 import CollapseItem from './Collapse/CollapseItem.vue';
+import ContactUs from './ContactUs.vue';
 import Navbar from './Navbar/Navbar';
 import NavLink from './Navbar/NavLink';
 import NavbarToggleButton from './Navbar/NavbarToggleButton';
@@ -20,29 +21,32 @@ import Tabs from './Tabs/Tabs.vue';
 import Modal from './Modal.vue';
 import Parallax from './Parallax.vue';
 import Slider from './Slider.vue';
+import Skills from './Skills.vue';
 
 import Pagination from './Pagination.vue';
 
 export {
-  Alert,
-  Collapse,
-  CollapseItem,
-  Checkbox,
-  Switch,
-  Badge,
-  Progress,
-  Pagination,
-  Radio,
-  FormGroupInput,
-  Card,
-  DropDown,
-  Navbar,
-  NavbarToggleButton,
-  NavLink,
-  TabPane,
-  Tabs,
-  Modal,
-  Parallax,
-  Slider,
-  Button
+    Alert,
+    Collapse,
+    CollapseItem,
+    ContactUs,
+    Checkbox,
+    Switch,
+    Badge,
+    Progress,
+    Pagination,
+    Radio,
+    FormGroupInput,
+    Card,
+    DropDown,
+    Navbar,
+    NavbarToggleButton,
+    NavLink,
+    TabPane,
+    Tabs,
+    Modal,
+    Parallax,
+    Slider,
+    Skills,
+    Button
 };

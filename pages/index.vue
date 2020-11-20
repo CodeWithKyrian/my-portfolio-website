@@ -11,7 +11,7 @@
           <img class="n-logo" src="img/now-logo.png" alt="" />
           <h1 class="h1-seo">CodeWithKyrian</h1>
           <h3>Learn and understand programming to the core</h3>
-          <n-button type="primary" round>Contact me</n-button>
+          <nuxt-link :to="{ path: '/about',hash:'#contact-me'}" class="btn btn-primary btn-round contact-btn">Contact</nuxt-link>
           <n-button type="primary" simple round>Recent Tutorials</n-button>
         </div>
         <h6 class="category category-absolute">
