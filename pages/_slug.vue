@@ -36,6 +36,7 @@
 
 <script>
 export default {
+  watchQuery: ['page'],
     head: {
         bodyAttrs: {
             class: "sidebar-collapse slug-page",

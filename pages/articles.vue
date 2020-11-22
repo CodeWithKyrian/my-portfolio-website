@@ -62,6 +62,7 @@
 <script>
 import { Card, Pagination } from '@/components';
 export default {
+  watchQuery: ['page'],
     head: {
         title: "Dev Blog",
         bodyAttrs: {
