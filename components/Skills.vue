@@ -1,7 +1,7 @@
 <template>
   <div class="container">
           <div class="col-md-8 ml-auto mr-auto text-center">
-            <h4 class="title">My Skills</h4>
+            <h3 class="title">My Skills</h3>
             <p>Here are the different fields I've used over the years as well as the level of mastery of each skill</p>
           </div>
           <div class="clearfix"></div> 

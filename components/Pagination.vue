@@ -5,7 +5,7 @@
       :class="[{ disabled: value === 1 }, prevItemClasses]"
     >
       <a class="page-link" aria-label="Previous" @click="prevPage">
-        <slot name="prev">»</slot>
+        <slot name="prev">≪</slot>
       </a>
     </li>
     <li
@@ -21,7 +21,7 @@
       :class="[{ disabled: value === totalPages }, nextItemClasses]"
     >
       <a class="page-link" aria-label="Next" @click="nextPage">
-        <slot name="next">»</slot>
+        <slot name="next">≫</slot>
       </a>
     </li>
   </ul>
@@ -121,25 +121,25 @@ export default {
       return arr;
     },
     changePage(item) {
-      this.$emit('input', item);
+      this.$emit('changePage', item);
     },
     nextPage() {
       if (this.value < this.totalPages) {
-        this.$emit('input', this.value + 1);
+        this.$emit('changePage', this.value + 1);
       }
     },
     prevPage() {
       if (this.value > 1) {
-        this.$emit('input', this.value - 1);
+        this.$emit('changePage', this.value - 1);
       }
     }
   },
   watch: {
     perPage() {
-      this.$emit('input', 1);
+      this.$emit('changePage', 1);
     },
     total() {
-      this.$emit('input', 1);
+      this.$emit('changePage', 1);
     }
   }
 };

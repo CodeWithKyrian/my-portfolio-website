@@ -22,24 +22,25 @@
                     <div class="col-lg-6 col-sm-6" v-for="blog in blogs" :key="blog.id">
                         <card type="blog" plain>
                             <div slot="header" class="img-container">
-                                <router-link to="/sjakajs">
-                                    <img v-lazy="blog.cover_img" alt="" />
+                                <router-link :to="'/' + blog.slug">
+                                    <img v-lazy="blog.cover_img? blog.cover_img : '/img/1920dummy.png'" alt="" />
                                 </router-link>                        
                             </div>
                             <template slot="default">
-                                <router-link to="/sjakajs">
+                                <router-link :to="'/' + blog.slug">
                                     <h4 class="card-title">{{ blog.title}}</h4>
                                 </router-link>
-                                <p class="card-text">{{blog.content}}...</p>
-                                <router-link to="/sjakajs" class="btn btn-primary pull-right">Read more</router-link>
+                                <p class="card-text">{{blog.preview}}...</p>
+                                <router-link :to="'/' + blog.slug" class="btn btn-primary pull-right">Read more</router-link>
                             </template>
                         </card>
                     </div>
                   </div>
                   <n-pagination
                     type="primary"
-                    :page-count="10"
-                    v-model="pagination.current"
+                    :page-count="pagination.page_count"
+                    v-model="pagination.current_page"
+                    @changePage="changePage"
                   >
                   </n-pagination>
               </div>
@@ -49,7 +50,7 @@
           </div>           
         <div class="row comments">
           <div class="col-md-6 ml-auto mr-auto">
-            <h4 class="title text-center">Comments</h4>
+            <h4 class="title text-center">Another</h4>
           </div>
         </div>
       </div>
@@ -73,43 +74,36 @@ export default {
     },
     data(){
         return {
-            blogs: [
-                {
-                    id: 1,
-                    title: "How to make a great toast for your sick boss",
-                    cover_img: "/img/thumbnail2.png",
-                    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nam minus? Velit dolor enim facilis!"
-                },
-                {
-                    id: 2,
-                    title: "Reading the palace of the prince of Cantebury",
-                     cover_img: "/img/thumbnail1.png",
-                    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nam minus? Velit dolor enim facilis!"
-                },{
-                    id: 3,
-                    title: "JavaScript functions and their ripple mentalities",
-                     cover_img: "/img/thumbnail4.png",
-                    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nam minus? Velit dolor enim facilis!"
-                },{
-                    id: 4,
-                    title: "How to make a great toast for your sick boss",
-                     cover_img: "/img/thumbnail3.png",
-                    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nam minus? Velit dolor enim facilis!"
-                },{
-                    id: 5,
-                    title: "Bringing your A game to the table of chess and wide",
-                     cover_img: "/img/thumbnail2.png",
-                    content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto, nam minus? Velit dolor enim facilis!"
-                }
-            ],
+            blogs: [],
             pagination: {
-                simple: 1,
-                current: 1,
-                full: 3
+                current_page: 0,
+                page_count: 0
             }
         }
+    },
+    watch: {
+        '$route.query': '$fetch'
+    },
+    async fetch () {
+      var params = {
+        page: this.$route.query.page ? this.$route.query.page : 1,
+        }
+
+      let res = await this.$axios.get('/articles', {params});
+      var result = res.data;
+      this.blogs = result.articles;
+      this.pagination.current_page = result.meta.current_page
+      this.pagination.page_count = result.meta.last_page
+    },
+    methods : {
+      changePage(page){
+        this.$router.push({
+          path: "/articles",
+           query: {page}
+        });
+      }
     }
-}
+  }
 </script>
 
 <style>

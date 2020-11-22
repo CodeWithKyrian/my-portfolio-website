@@ -1,8 +1,8 @@
 <template>
   <div class="section section-contact-us text-center">
       <div class="container">
-        <h2 class="title">Want to work with me?</h2>
-        <p class="description">Your project is very important to me.</p>
+        <h3 class="title">Want to work with me?</h3>
+        <p class="about-content">Your project is very important to me.</p>
         <div class="row">
           <div class="col-lg-6 text-center ml-auto mr-auto col-md-8">
             <fg-input

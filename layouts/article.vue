@@ -1,8 +1,8 @@
 <template>
 <div class="app">
-    <my-navbar :colorOnScroll="400"></my-navbar>
+    <my-navbar :colorOnScroll="0" :transparent="false"></my-navbar>
     <div class="wrapper">
-        <nuxt />
+        <nuxt keep-alive/>
     </div>
     <main-footer backgroundColor="black"></main-footer>
 </div>
