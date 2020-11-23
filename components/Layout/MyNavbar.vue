@@ -7,30 +7,19 @@
     menu-classes="ml-auto"
   >
     <template>
-      <router-link v-popover:popover1 class="navbar-brand" to="/">
+      <router-link class="navbar-brand" to="/">
         CodeWithKyrian
       </router-link>
-      <el-popover
-        ref="popover1"
-        popper-class="popover"
-        placement="bottom"
-        width="200"
-        trigger="hover"
-      >
-        <div class="popover-body">
-          Code with Kyrian Obikwelu
-        </div>
-      </el-popover>
     </template>
     <template slot="navbar-menu">
       <li class="nav-item">
-            <router-link v-popover:popover1 class="nav-link" to="/">
+            <router-link class="nav-link" to="/">
                 <i class="now-ui-icons business_bank"></i>
                 <p>Home</p>
             </router-link>
       </li>
       <li class="nav-item">
-            <router-link v-popover:popover1 class="nav-link" to="/about">
+            <router-link class="nav-link" to="/about">
                 <i class="now-ui-icons users_circle-08"></i>
                 <p>About Me</p>
             </router-link>
@@ -49,12 +38,12 @@
         </nav-link>
       </drop-down>
       <li class="nav-item">
-            <router-link v-popover:popover1 class="nav-link" to="/courses">
+            <router-link class="nav-link" to="/courses">
                 <p>Courses</p>
             </router-link>
       </li>
       <li class="nav-item">
-            <router-link v-popover:popover1 class="nav-link btn btn-neutral" to="/login">
+            <router-link class="nav-link btn btn-neutral" to="/login">
                 <p>Login</p>
             </router-link>
       </li>
@@ -74,8 +63,7 @@ export default {
   components: {
     DropDown,
     Navbar,
-    NavLink,
-    [Popover.name]: Popover
+    NavLink
   }
 };
 </script>

@@ -58,6 +58,9 @@ export default {
   head: {
     bodyAttrs: {
       class: "sidebar-collapse login-page",
+    },
+    htmlAttrs: {
+      class: ""
     }
   },
   components: {

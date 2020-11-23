@@ -2,7 +2,7 @@
 <div class="app">
     <my-navbar :colorOnScroll="0" :transparent="false"></my-navbar>
     <div class="wrapper">
-        <nuxt keep-alive/>
+        <nuxt keep-alive />
     </div>
     <main-footer backgroundColor="black"></main-footer>
 </div>

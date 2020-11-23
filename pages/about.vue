@@ -97,6 +97,9 @@ export default {
     title: 'About Kyrian Obikwelu',
     bodyAttrs: {
       class: "sidebar-collapse profile-page",
+    },
+    htmlAttrs: {
+      class: ""
     }
   },
   components: {

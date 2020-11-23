@@ -38,9 +38,12 @@
 export default {
   watchQuery: ['page'],
     head: {
-        bodyAttrs: {
-            class: "sidebar-collapse slug-page",
-        }
+      bodyAttrs: {
+        class: "sidebar-collapse slug-page",
+    },
+    htmlAttrs: {
+      class: ""
+    }
     },
     layout: "article",
     data(){
